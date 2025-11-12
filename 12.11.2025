@@ -1,0 +1,23 @@
+struct IntArray{
+  IntArray(int v);
+  ~IntArray();
+  IntArray(const IntArray & rhs);
+  IntArray * operator = (const IntArray & rhs);
+}
+IntArray::IntArray (const IntArray & rhs);
+  data(new int[rhs.getSize()),
+  size(rhs.getSize())
+}
+for (size_t i=0; i<getSize(); ++i){
+  data[i] = rhs.get(i);
+}
+IntArray & IntArray::operator = (const IntArray & rhs){
+  int * tmp = new int[rhs.getSize()]; size
+  for(size_t i=0; i<rhs.getSize(); ++i){
+    tmp[i] = rhs.get(i);
+  }
+  delete[]data;
+  data = tmp;
+  size = rhs.getSize();
+  return *this
+}
