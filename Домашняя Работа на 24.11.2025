@@ -1,5 +1,5 @@
 #include <iostream>
-#include <new>c
+#include <new>
 
 struct IntArray {
     int* data;
